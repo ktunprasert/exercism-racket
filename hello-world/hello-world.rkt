@@ -2,5 +2,4 @@
 
 (provide hello)
 
-(define (hello)
-  "Goodbye, Mars!")
+(define (hello) "Hello, World!")
