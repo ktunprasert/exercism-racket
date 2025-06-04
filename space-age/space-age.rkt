@@ -12,30 +12,15 @@
 ;; | Uranus  | 84.016846
 ;; | Neptune | 164.79132
 
-(define on-earth
-  (lambda (seconds) exact->inexact (/ seconds earth-year)))
+(define (on-earth seconds) (exact->inexact (/ seconds earth-year)))
 
-(define on-mercury
-  (lambda (seconds)
-    (/ (on-earth seconds) 0.2408467)))
-(define on-venus
-  (lambda (seconds)
-    (/ (on-earth seconds) 0.61519726)))
-(define on-mars
-  (lambda (seconds)
-    (/ (on-earth seconds) 1.8808158)))
-(define on-jupiter
-  (lambda (seconds)
-    (/ (on-earth seconds) 11.862615)))
-(define on-saturn
-  (lambda (seconds)
-    (/ (on-earth seconds) 29.447498)))
-(define on-uranus
-  (lambda (seconds)
-    (/ (on-earth seconds) 84.016846)))
-(define on-neptune
-  (lambda (seconds)
-    (/ (on-earth seconds) 164.79132)))
+(define (on-mercury seconds) (/ (on-earth seconds) 0.2408467))
+(define (on-venus seconds) (/ (on-earth seconds) 0.61519726))
+(define (on-mars seconds) (/ (on-earth seconds) 1.8808158))
+(define (on-jupiter seconds) (/ (on-earth seconds) 11.862615))
+(define (on-saturn seconds) (/ (on-earth seconds) 29.447498))
+(define (on-uranus seconds) (/ (on-earth seconds) 84.016846))
+(define (on-neptune seconds) (/ (on-earth seconds) 164.79132))
 
 (provide on-earth
          on-mercury
